@@ -13,6 +13,9 @@
     <v-card-text class="text-h4 ">Ton Compte</v-card-text>
     <v-form v-model="form" @submit.prevent="onSubmit">
 
+      <v-text-field disabled label="Nom d'utilisateur: @charloYellowBanana"
+        placeholder="Entrez votre mot de passe"></v-text-field>
+
       <v-text-field v-model="password" :readonly="loading" :rules="[required]" clearable label="Mot de passe"
         :type="show1 ? 'text' : 'password'" placeholder="Entrez votre mot de passe"></v-text-field>
 
@@ -49,7 +52,7 @@ export default {
     form: false,
     show1: false,
     password: "",
-    confirmPassword: "test",
+    confirmPassword: "09102022",
     loading: false,
 
     dialog: false,
@@ -61,7 +64,7 @@ export default {
 
 
 
-      if (this.password === "test") {
+      if (this.password === "09102022") {
         this.loading = true;
         this.dialog1 = true;
 
